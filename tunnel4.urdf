@@ -1,0 +1,502 @@
+<?xml version="1.0" ?>
+<robot name="tunneltwo">
+
+  <link name="bot">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="top">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="left">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+                    <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="right">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+ 
+    
+  <joint name="botleft" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="1.255 0 1.255"/>
+  <parent link="bot"/>
+  <child link="left"/>
+  </joint>
+  
+  <joint name="botright" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="-1.255 0 1.255"/>
+  <parent link="bot"/>
+  <child link="right"/>
+  </joint>
+  
+  <joint name="lefttop" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="1.255 0 1.255"/>
+  <parent link="left"/>
+  <child link="top"/>
+  </joint>
+  
+   <link name="mid">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="midup">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="botmid" type="fixed">
+  <origin rpy="0 0 0" xyz="0 -2.5 0"/>
+  <parent link="bot"/>
+  <child link="mid"/>
+  </joint>
+  
+  <joint name="botmidup" type="fixed">
+  <origin rpy="0 0 0" xyz="0 -2.5 2.505"/>
+  <parent link="bot"/>
+  <child link="midup"/>
+  </joint>
+
+ <link name="leftlol">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+                    <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="botleftlol" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="-1.255 0 1.255"/>
+  <parent link="mid"/>
+  <child link="leftlol"/>
+  </joint>
+  
+
+
+
+
+
+<link name="botone">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="botbotone" type="fixed">
+    <origin rpy="0 0 -1.5708" xyz="2.5 -2.5 0"/>
+    <parent link="bot"/>
+    <child link="botone"/>
+</joint>
+  
+  <link name="topone">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="leftone">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+                    <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="rightone">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+ 
+  <joint name="botleftone" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="1.255 0 1.255"/>
+  <parent link="botone"/>
+  <child link="leftone"/>
+  </joint>
+  
+  <joint name="botrightone" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="-1.255 0 1.255"/>
+  <parent link="botone"/>
+  <child link="rightone"/>
+  </joint>
+  
+  <joint name="lefttopone" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="1.255 0 1.255"/>
+  <parent link="leftone"/>
+  <child link="topone"/>
+  </joint>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link name="botth">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="botbotth" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -5 0"/>
+    <parent link="bot"/>
+    <child link="botth"/>
+</joint>
+  
+  <link name="topth">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+          <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="leftth">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+                    <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name="rightth">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="2.5 2.5 0.01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+            <box size="2.5 2.5 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  
+ 
+  <joint name="botleftth" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="1.255 0 1.255"/>
+  <parent link="botth"/>
+  <child link="leftth"/>
+  </joint>
+  
+  <joint name="botrightth" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="-1.255 0 1.255"/>
+  <parent link="botth"/>
+  <child link="rightth"/>
+  </joint>
+  
+  <joint name="lefttopth" type="fixed">
+  <origin rpy="0 -1.5708 0" xyz="1.255 0 1.255"/>
+  <parent link="leftth"/>
+  <child link="topth"/>
+  </joint>
+</robot>
